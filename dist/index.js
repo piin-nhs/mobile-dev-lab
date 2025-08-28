@@ -7,6 +7,13 @@ const bai4_1 = require("./bai4");
 const bai5_1 = require("./bai5");
 const bai6_1 = require("./bai6");
 const bai7_1 = require("./bai7");
+const bai8_1 = require("./bai8");
+const bai10_1 = require("./bai10");
+const bai11_1 = require("./bai11");
+const bai11_2 = require("./bai11");
+const bai12_1 = require("./bai12");
+const bai12_2 = require("./bai12");
+const bai13_1 = require("./bai13");
 console.log("Bai 1");
 var person = new bai1_1.Person("NguyenHoangSang", 21);
 console.log(person);
@@ -43,5 +50,33 @@ book.displayInfo();
 console.log("Bai 7");
 var user = new bai7_1.User("NguyenHoangSang");
 console.log(user._name);
-user._name = "Sang";
+user._name = "HoangSang";
 console.log(user._name);
+console.log("Bai 8");
+const products = [
+    new bai8_1.Product("Laptop", 1200),
+    new bai8_1.Product("Mouse", 25),
+    new bai8_1.Product("Keyboard", 120),
+];
+const filtered = products.filter(p => p.price > 100);
+filtered.forEach(p => console.log(p));
+console.log("Bai 9");
+console.log("Tao interface Animal (Done)");
+console.log("Bai 10");
+var account = new bai10_1.Account("HoangSang", "12345");
+console.log(account);
+console.log("Bai 11");
+var cat = new bai11_2.Cat("Coco");
+var dog = new bai11_1.Dog("Lucy");
+cat.meow();
+dog.bark();
+console.log("Bai 12");
+var bird = new bai12_1.Bird("Vet");
+var fish = new bai12_2.Fish("Ro");
+bird.fly();
+fish.swim();
+console.log("Bai 13");
+const s = new bai13_1.Square(5);
+console.log("Square area:", s.area());
+const c = new bai13_1.Circle(3);
+console.log("Circle area:", c.area());

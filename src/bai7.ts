@@ -1,5 +1,5 @@
 export class User {
-    name: String;
+    private name: String;
 
     constructor (name: String){
         this.name = name;
