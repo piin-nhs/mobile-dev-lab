@@ -12,6 +12,15 @@ import { Cat } from "./bai11";
 import { Bird } from "./bai12";
 import { Fish } from "./bai12";
 import { Circle, Square } from "./bai13";
+import { Developer, Manager } from "./bai14";
+import { Book1, Library, User1 } from "./bai15";
+import { Box } from "./bai16";
+import { Logger } from "./bai17";
+import { MathUtil } from "./bai18";
+import { Animal1 } from "./bai19";
+import { Dog1 } from "./bai19";
+import { Cat1 } from "./bai19";
+import { Bike, Car1, Vehicle } from "./bai20";
 
 console.log("Bai 1")
 var person = new Person("NguyenHoangSang", 21);
@@ -89,6 +98,63 @@ const s = new Square(5);
 console.log("Square area:", s.area());   
 const c = new Circle(3);
 console.log("Circle area:", c.area());  
+
+console.log("Bai 14")
+const m = new Manager("Alice", 5000);
+m.work();        
+m.manageTeam();  
+const d = new Developer("Bob", 4000);
+d.work();      
+d.writeCode();   
+
+console.log("Bai 15");
+const users: User1[] = [
+    new User1("Alice"),
+    new User1("Bob")
+]
+const lib = new Library(users);
+lib.addBook(new Book1("Clean Code", "Robert C. Martin"));
+lib.addBook(new Book1("Design Patterns", "GoF"));
+console.log(lib)
+
+console.log("Bai 16");
+const stringBox = new Box<string>("Hello");
+console.log(stringBox._value); 
+stringBox._value = "World";
+console.log(stringBox._value);
+
+console.log("Bai 17");
+const logger1 = Logger.getInstance();
+const logger2 = Logger.getInstance();
+logger1.log("A");
+logger2.log("B");
+console.log(logger1 === logger2);
+
+console.log("Bai 18");
+console.log(MathUtil.add(10, 5));       
+console.log(MathUtil.subtract(10, 5));  
+console.log(MathUtil.multiply(10, 5));
+console.log(MathUtil.divide(10, 5));   
+
+console.log("Bai 19");
+const animals: Animal1[] = [
+    new Dog1("Buddy"),
+    new Cat1("Kitty"),
+    new Animal1("Generic Animal")
+];
+animals.forEach(a => a.sound());
+
+console.log("Bai 20");
+const vehicles: Vehicle[] = [
+    new Car1("Toyota"),
+    new Bike("Giant")
+];
+vehicles.forEach(v => v.drive());
+
+
+
+
+
 
 
 

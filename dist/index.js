@@ -14,6 +14,15 @@ const bai11_2 = require("./bai11");
 const bai12_1 = require("./bai12");
 const bai12_2 = require("./bai12");
 const bai13_1 = require("./bai13");
+const bai14_1 = require("./bai14");
+const bai15_1 = require("./bai15");
+const bai16_1 = require("./bai16");
+const bai17_1 = require("./bai17");
+const bai18_1 = require("./bai18");
+const bai19_1 = require("./bai19");
+const bai19_2 = require("./bai19");
+const bai19_3 = require("./bai19");
+const bai20_1 = require("./bai20");
 console.log("Bai 1");
 var person = new bai1_1.Person("NguyenHoangSang", 21);
 console.log(person);
@@ -80,3 +89,48 @@ const s = new bai13_1.Square(5);
 console.log("Square area:", s.area());
 const c = new bai13_1.Circle(3);
 console.log("Circle area:", c.area());
+console.log("Bai 14");
+const m = new bai14_1.Manager("Alice", 5000);
+m.work();
+m.manageTeam();
+const d = new bai14_1.Developer("Bob", 4000);
+d.work();
+d.writeCode();
+console.log("Bai 15");
+const users = [
+    new bai15_1.User1("Alice"),
+    new bai15_1.User1("Bob")
+];
+const lib = new bai15_1.Library(users);
+lib.addBook(new bai15_1.Book1("Clean Code", "Robert C. Martin"));
+lib.addBook(new bai15_1.Book1("Design Patterns", "GoF"));
+console.log(lib);
+console.log("Bai 16");
+const stringBox = new bai16_1.Box("Hello");
+console.log(stringBox._value);
+stringBox._value = "World";
+console.log(stringBox._value);
+console.log("Bai 17");
+const logger1 = bai17_1.Logger.getInstance();
+const logger2 = bai17_1.Logger.getInstance();
+logger1.log("A");
+logger2.log("B");
+console.log(logger1 === logger2);
+console.log("Bai 18");
+console.log(bai18_1.MathUtil.add(10, 5));
+console.log(bai18_1.MathUtil.subtract(10, 5));
+console.log(bai18_1.MathUtil.multiply(10, 5));
+console.log(bai18_1.MathUtil.divide(10, 5));
+console.log("Bai 19");
+const animals = [
+    new bai19_2.Dog1("Buddy"),
+    new bai19_3.Cat1("Kitty"),
+    new bai19_1.Animal1("Generic Animal")
+];
+animals.forEach(a => a.sound());
+console.log("Bai 20");
+const vehicles = [
+    new bai20_1.Car1("Toyota"),
+    new bai20_1.Bike("Giant")
+];
+vehicles.forEach(v => v.drive());
