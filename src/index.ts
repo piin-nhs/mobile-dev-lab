@@ -21,6 +21,16 @@ import { Animal1 } from "./bai19";
 import { Dog1 } from "./bai19";
 import { Cat1 } from "./bai19";
 import { Bike, Car1, Vehicle } from "./bai20";
+import { Repository } from "./bai21";
+import { Stack } from "./bai22";
+import { CardPayment, CashPayment, Payment } from "./bai23";
+import { AirConditioner, Fan } from "./bai24";
+import { Shape } from "./bai25";
+import { Order, Product1 } from "./bai26";
+import { Teacher } from "./bai27";
+import { Cat2, Dog2 } from "./bai28";
+import { Car2, Movable, Robot } from "./bai29";
+import { School, Student1, Teacher1 } from "./bai30";
 
 console.log("Bai 1")
 var person = new Person("NguyenHoangSang", 21);
@@ -150,6 +160,76 @@ const vehicles: Vehicle[] = [
     new Bike("Giant")
 ];
 vehicles.forEach(v => v.drive());
+
+console.log("Bai 21");
+const stringRepo = new Repository<string>();
+stringRepo.add("Hello");
+stringRepo.add("World");
+console.log(stringRepo.getAll());
+
+console.log("Bai 22");
+const stack = new Stack<number>();
+stack.push(10);
+stack.push(20);
+stack.push(30);
+console.log(stack.peek());   
+console.log(stack.pop()); 
+console.log(stack.peek());  
+console.log(stack.isEmpty()); 
+stack.pop();
+stack.pop();
+console.log(stack.isEmpty());
+
+console.log("Bai 23");
+const payments: Payment[] = [
+    new CashPayment(),
+    new CardPayment()
+];
+
+payments.forEach(p => p.pay(100));
+
+console.log("Bai 24");
+const fan = new Fan();
+fan.turnOn(); 
+const ac = new AirConditioner();
+ac.turnOn();
+
+console.log("Bai 25");
+Shape.describe();
+
+console.log("Bai 26");
+const order = new Order([
+    new Product1("Laptop",1500,1),
+    new Product1("Mouse", 25,2)
+  ]
+);
+order.showOrder();
+
+console.log("Bai 27");
+const teacher = new Teacher("Sang", 21, "Toán");
+teacher.introduce();
+
+console.log("Bai 28");
+const dog2 = new Dog2();
+dog2.speak();
+const cat2 = new Cat2();
+cat2.speak(); 
+
+console.log("Bai 29");
+const movable: Movable[] = [new Car2(), new Robot()];
+movable.forEach(o => o.move());
+
+console.log("Bai 30");
+const school = new School();
+const teacher1 = new Teacher1("Alice", 35, "Math");
+const teacher2 = new Teacher1("Bob", 40, "English");
+const student1 = new Student1("Charlie", 16, 10);
+const student2 = new Student1("Daisy", 17, 11);
+school.addTeacher(teacher1);
+school.addTeacher(teacher2);
+school.addStudent(student1);
+school.addStudent(student2);
+school.displayInfo();
 
 
 
