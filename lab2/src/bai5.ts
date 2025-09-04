@@ -1,4 +1,4 @@
-export function taskDone(time: number) {
+ export function simulateTask(time: number) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
         resolve("Task done");

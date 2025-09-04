@@ -1,11 +1,11 @@
 export function randomNumber() {
   return new Promise((resolve, reject) => {
-    const number = Math.random(); 
+    const number = Math.random() * 2 - 1;
 
     if (number >= 0) {
-      resolve(number); 
+      resolve(number);
     } else {
-      reject("So am"); 
+      reject("So am");
     }
   });
 }
