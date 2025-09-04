@@ -17,6 +17,16 @@ import { runForAwait } from "./bai17";
 import { run3 } from "./bai18";
 import { run4 } from "./bai19";
 import { run5 } from "./bai20";
+import { fetchTodo } from "./bai21";
+import { run6 } from "./bai22";
+import { fetchCompletedTodos } from "./bai23";
+import { postData } from "./bai24";
+import { downloadFile } from "./bai25";
+import { waitFiveSeconds } from "./bai26";
+import { fetchWithRetry } from "./bai27";
+import { batchProcess } from "./bai28";
+import { queueProcess } from "./bai29";
+import { run7 } from "./bai30";
 
 // Bai1
 myTimeout.then((result) => {
@@ -111,3 +121,36 @@ run4();
 
 // Bai 20
 run5();
+
+// Bai 21
+fetchTodo();
+
+// Bai 22
+run6();
+
+// Bai 23
+fetchCompletedTodos();
+
+// Bai 24
+postData();
+
+// Bai 25
+downloadFile();
+
+// Bai 26
+waitFiveSeconds();
+
+// Bai 27
+fetchWithRetry("https://jsonplaceholder.typicode.com/todos/1", 3)
+  .then((data) => console.log("Bai 27:", data))
+  .catch((err) => console.error("Bai 27:", err));
+
+// Bai 28
+batchProcess();
+
+// Bai 29
+queueProcess(); 
+
+
+// Bai 30
+run7();

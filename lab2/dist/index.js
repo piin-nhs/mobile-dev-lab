@@ -19,6 +19,16 @@ const bai17_1 = require("./bai17");
 const bai18_1 = require("./bai18");
 const bai19_1 = require("./bai19");
 const bai20_1 = require("./bai20");
+const bai21_1 = require("./bai21");
+const bai22_1 = require("./bai22");
+const bai23_1 = require("./bai23");
+const bai24_1 = require("./bai24");
+const bai25_1 = require("./bai25");
+const bai26_1 = require("./bai26");
+const bai27_1 = require("./bai27");
+const bai28_1 = require("./bai28");
+const bai29_1 = require("./bai29");
+const bai30_1 = require("./bai30");
 // Bai1
 bai1_1.myTimeout.then((result) => {
     console.log("Bai 1: " + result);
@@ -93,3 +103,25 @@ bai10_1.finaly
 (0, bai19_1.run4)();
 // Bai 20
 (0, bai20_1.run5)();
+// Bai 21
+(0, bai21_1.fetchTodo)();
+// Bai 22
+(0, bai22_1.run6)();
+// Bai 23
+(0, bai23_1.fetchCompletedTodos)();
+// Bai 24
+(0, bai24_1.postData)();
+// Bai 25
+(0, bai25_1.downloadFile)();
+// Bai 26
+(0, bai26_1.waitFiveSeconds)();
+// Bai 27
+(0, bai27_1.fetchWithRetry)("https://jsonplaceholder.typicode.com/todos/1", 3)
+    .then((data) => console.log("Bai 27:", data))
+    .catch((err) => console.error("Bai 27:", err));
+// Bai 28
+(0, bai28_1.batchProcess)();
+// Bai 29
+(0, bai29_1.queueProcess)();
+// Bai 30
+(0, bai30_1.run7)();
